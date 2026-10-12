@@ -26,6 +26,28 @@
           .replace(/-+$/, '');
       }
 
+      // Decap calls saving "publiceren", but whether a question is on the site depends on the
+      // Status field. Rename the save button and its messages to "opslaan" to avoid two meanings.
+      (function () {
+        var nl = CMS.getLocale('nl');
+        if (!nl) return;
+        var knoppen = {
+          publish: 'Opslaan',
+          publishing: 'Opslaan...',
+          published: 'Opgeslagen',
+          publishNow: 'Opslaan',
+          publishAndCreateNew: 'Opslaan en nieuwe vraag maken',
+          publishAndDuplicate: 'Opslaan en kopie maken',
+        };
+        var meldingen = {
+          entryPublished: 'Opgeslagen. De site is over een minuut bijgewerkt.',
+          entrySaved: 'Opgeslagen. De site is over een minuut bijgewerkt.',
+        };
+        Object.assign(nl.editor.editorToolbar, knoppen);
+        Object.assign(nl.ui.toast, meldingen);
+        CMS.registerLocale('nl', nl);
+      })();
+
       // Fill the slug from the question when it is left empty. Decap uses this field
       // as the file name of a new entry; for existing entries the file name never changes.
       CMS.registerEventListener({

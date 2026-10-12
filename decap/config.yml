@@ -57,10 +57,10 @@ collections:
     summary: '{{vraag}}  ({{status}}, {{categorie}})'
     sortable_fields: ['vraag', 'categorie', 'laatst_gecheckt']
     view_filters:
-      - label: Concept
+      - label: Nog niet op de site
         field: status
         pattern: concept
-      - label: Gepubliceerd
+      - label: Op de site
         field: status
         pattern: gepubliceerd
     view_groups:
@@ -101,13 +101,14 @@ collections:
         picker_utc: true
         hint: Heb je het antwoord gecontroleerd? Zet dan de datum van vandaag.
 
-      - label: Status
+      - label: Op de site
         name: status
         widget: select
         default: concept
+        hint: Zet dit pas op "Ja" als de commissie het antwoord heeft gecontroleerd.
         options:
-          - { label: 'Concept (niet zichtbaar op de site)', value: concept }
-          - { label: Gepubliceerd, value: gepubliceerd }
+          - { label: 'Nee, nog niet (concept)', value: concept }
+          - { label: 'Ja, zichtbaar op de site', value: gepubliceerd }
 
       - label: Trefwoorden
         name: trefwoorden

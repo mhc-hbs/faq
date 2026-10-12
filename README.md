@@ -21,18 +21,18 @@ Een eenvoudige site met antwoorden op de vragen die steeds terugkomen in de appg
 ## Een vraag toevoegen of bewerken via /admin
 
 1. Ga naar `https://<domein van de site>/admin` en klik op **Inloggen met GitHub**. De eerste keer vraagt GitHub of je de app toegang geeft; klik op **Authorize**.
-2. Kies **Vragen**. Je ziet alle vragen, ook de concepten. Bovenaan kun je filteren op Concept of Gepubliceerd.
+2. Kies **Vragen**. Je ziet alle vragen, ook de concepten. Bovenaan kun je filteren op Nog niet op de site of Op de site.
 3. Klik op een vraag om te bewerken, of op **Nieuwe Vraag** om er een toe te voegen.
 4. Vul de velden in:
    - **Vraag**: zoals een ouder hem in de appgroep zou stellen.
    - **Adres (slug)**: laat leeg. Het adres wordt dan gemaakt van de vraag. Dit telt alleen bij een nieuwe vraag; daarna blijft het adres altijd hetzelfde, ook als je de vraag of dit veld later aanpast.
    - **Categorie** en **Eigenaar**: kies uit de lijst.
    - **Laatst gecheckt**: staat bij een nieuwe vraag op vandaag. Heb je een bestaand antwoord gecontroleerd, zet hier dan de datum van vandaag.
-   - **Status**: *Concept* is niet zichtbaar op de site. Zet op *Gepubliceerd* als het antwoord klopt.
+   - **Op de site**: *Nee, nog niet (concept)* is niet zichtbaar op de site. Zet op *Ja, zichtbaar op de site* als de commissie het antwoord heeft gecontroleerd. In het bestand heet dit veld `status`, met de waarden `concept` en `gepubliceerd`.
    - **Trefwoorden**: woorden die mensen gebruiken als ze zoeken, gescheiden door komma's.
    - **Gerelateerde vragen**: andere vragen die erbij horen. Ze komen onder het antwoord bij "Zie ook".
    - **Antwoord**: de tekst. Je kunt kopjes, lijstjes, vet en links gebruiken.
-5. Klik op **Publiceren** (rechtsboven). Je wijziging wordt direct opgeslagen in GitHub en Vercel bouwt de site opnieuw. Na een à twee minuten staat het online.
+5. Klik op **Opslaan** (bovenaan). Je wijziging wordt direct opgeslagen in GitHub en Vercel bouwt de site opnieuw. Na een à twee minuten staat het online.
 
 Is een antwoord ouder dan 12 maanden (volgens "Laatst gecheckt"), dan staat er een klein briefje op de pagina: "Dit antwoord is een tijd niet gecontroleerd." Pas de datum aan als je het hebt gecontroleerd.
 
