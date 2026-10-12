@@ -1,0 +1,47 @@
+---
+import Basis from '../../layouts/Basis.astro';
+import { categorieen, type Categorie } from '../../lib/club';
+import { zichtbareVragen, vraagUrl, type Vraag } from '../../lib/faq';
+
+export async function getStaticPaths() {
+  const vragen = await zichtbareVragen();
+  return categorieen.map((categorie) => ({
+    params: { categorie: categorie.slug },
+    props: { categorie, vragen: vragen.filter((v) => v.data.categorie === categorie.slug) },
+  }));
+}
+
+interface Props {
+  categorie: Categorie;
+  vragen: Vraag[];
+}
+
+const { categorie, vragen } = Astro.props;
+---
+
+<Basis titel={categorie.naam} beschrijving={categorie.omschrijving}>
+  <p class="kruimel"><a href="/">Alle onderwerpen</a></p>
+  <h1>{categorie.naam}</h1>
+  <p class="intro">{categorie.omschrijving}</p>
+
+  {
+    vragen.length === 0 ? (
+      <p class="leeg">Hier staan nog geen vragen.</p>
+    ) : (
+      <ul class="lijst">
+        {vragen.map((v) => (
+          <li>
+            <a href={vraagUrl(v)}>
+              <span class="lijst-titel">
+                <span>
+                  {v.data.vraag}
+                  {v.data.status === 'concept' && <span class="label-concept">Concept</span>}
+                </span>
+              </span>
+            </a>
+          </li>
+        ))}
+      </ul>
+    )
+  }
+</Basis>

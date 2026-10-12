@@ -1,0 +1,128 @@
+# Instellingen voor de beheeromgeving op /admin (Decap CMS).
+#
+# Dit is het bestand dat je bewerkt. Bij elke build maakt scripts/decap-config.mjs
+# hiervan public/admin/config.yml en vult daarbij de keuzelijsten voor "categorie"
+# en "eigenaar" uit src/content/categorieen.yaml en src/content/eigenaren.yaml.
+# Zo kunnen die lijsten nooit uit elkaar lopen.
+
+backend:
+  name: github
+  repo: mhc-hbs/faq
+  branch: main
+  # Inloggen loopt via de functies in api/auth.ts en api/callback.ts op deze site.
+  # base_url wordt in public/admin/index.html op het eigen domein gezet.
+  auth_endpoint: api/auth
+  # Genoeg voor een openbare repository. Wordt de repo ooit privé, zet dit dan op "repo".
+  auth_scope: public_repo
+  commit_messages:
+    create: 'Nieuwe vraag: {{slug}}'
+    update: 'Vraag bijgewerkt: {{slug}}'
+    delete: 'Vraag verwijderd: {{slug}}'
+    uploadMedia: 'Bestand toegevoegd: {{path}}'
+    deleteMedia: 'Bestand verwijderd: {{path}}'
+
+# Geen redactionele workflow: opslaan is direct een commit op main, Vercel bouwt de site opnieuw.
+publish_mode: simple
+
+# Lokaal bewerken zonder GitHub: zie README, "Lokaal draaien".
+local_backend: true
+
+locale: nl
+media_folder: public/uploads
+public_folder: /uploads
+
+slug:
+  encoding: ascii
+  clean_accents: true
+  sanitize_replacement: '-'
+
+collections:
+  - name: faq
+    label: Vragen
+    label_singular: Vraag
+    description: >-
+      Elke vraag is een eigen pagina. Het adres (slug) wordt gemaakt als je een nieuwe
+      vraag opslaat en verandert daarna niet meer, ook niet als je de vraag aanpast.
+    folder: src/content/faq
+    create: true
+    delete: true
+    extension: md
+    format: frontmatter
+    identifier_field: vraag
+    # Het veld "slug" wordt bij opslaan gevuld vanuit de vraag als het leeg is (zie index.html).
+    slug: '{{fields.slug}}'
+    summary: '{{vraag}}  ({{status}}, {{categorie}})'
+    sortable_fields: ['vraag', 'categorie', 'laatst_gecheckt']
+    view_filters:
+      - label: Concept
+        field: status
+        pattern: concept
+      - label: Gepubliceerd
+        field: status
+        pattern: gepubliceerd
+    view_groups:
+      - label: Categorie
+        field: categorie
+    fields:
+      - label: Vraag
+        name: vraag
+        widget: string
+        hint: Zoals een ouder hem in de appgroep zou stellen. Een vraag per pagina.
+
+      - label: Adres (slug)
+        name: slug
+        widget: string
+        required: false
+        hint: >-
+          Laat leeg, dan wordt het adres gemaakt van de vraag. Telt alleen bij een nieuwe
+          vraag; daarna blijft het adres altijd hetzelfde, want mensen delen het in WhatsApp.
+
+      - label: Categorie
+        name: categorie
+        widget: select
+        options: [] # gevuld door scripts/decap-config.mjs
+
+      - label: Eigenaar
+        name: eigenaar
+        widget: select
+        hint: Welke commissie is verantwoordelijk voor dit antwoord?
+        options: [] # gevuld door scripts/decap-config.mjs
+
+      - label: Laatst gecheckt
+        name: laatst_gecheckt
+        widget: datetime
+        default: '{{now}}'
+        format: 'YYYY-MM-DD'
+        date_format: 'DD-MM-YYYY'
+        time_format: false
+        picker_utc: true
+        hint: Heb je het antwoord gecontroleerd? Zet dan de datum van vandaag.
+
+      - label: Status
+        name: status
+        widget: select
+        default: concept
+        options:
+          - { label: 'Concept (niet zichtbaar op de site)', value: concept }
+          - { label: Gepubliceerd, value: gepubliceerd }
+
+      - label: Trefwoorden
+        name: trefwoorden
+        widget: list
+        required: false
+        hint: Woorden die mensen gebruiken als ze zoeken, gescheiden door komma's.
+
+      - label: Gerelateerde vragen
+        name: gerelateerd
+        widget: relation
+        collection: faq
+        value_field: '{{slug}}'
+        search_fields: ['vraag']
+        display_fields: ['vraag']
+        multiple: true
+        required: false
+
+      - label: Antwoord
+        name: body
+        widget: markdown
+        hint: Eerst het antwoord, dan de uitleg. Link naar de bron als het antwoord kan veranderen.

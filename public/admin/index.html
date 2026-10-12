@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="nl">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="robots" content="noindex" />
+    <title>Beheer | Vragen MHC HBS</title>
+    <link rel="icon" href="/favicon.png" />
+    <link href="/admin/config.yml" type="text/yaml" rel="cms-config-url" />
+  </head>
+  <body>
+    <script>
+      window.CMS_MANUAL_INIT = true;
+    </script>
+    <script src="https://unpkg.com/decap-cms@3.16.3/dist/decap-cms.js"></script>
+    <script>
+      // Same rules as Decap's own slug cleaning: lower case, no accents, words joined by dashes.
+      function maakSlug(tekst) {
+        return String(tekst || '')
+          .normalize('NFD')
+          .replace(/[̀-ͯ]/g, '')
+          .toLowerCase()
+          .replace(/[^a-z0-9]+/g, '-')
+          .replace(/^-+|-+$/g, '')
+          .slice(0, 80)
+          .replace(/-+$/, '');
+      }
+
+      // Fill the slug from the question when it is left empty. Decap uses this field
+      // as the file name of a new entry; for existing entries the file name never changes.
+      CMS.registerEventListener({
+        name: 'preSave',
+        handler: function ({ entry }) {
+          var data = entry.get('data');
+          var slug = maakSlug(data.get('slug')) || maakSlug(data.get('vraag'));
+          return data.set('slug', slug);
+        },
+      });
+
+      // Log in through api/auth on whichever domain this page is served from.
+      CMS.init({ config: { backend: { base_url: window.location.origin } } });
+    </script>
+  </body>
+</html>

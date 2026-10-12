@@ -1,0 +1,70 @@
+---
+import '../styles/global.css';
+
+interface Props {
+  titel: string;
+  beschrijving: string;
+  /** Text for og:title. Defaults to `titel`. */
+  ogTitel?: string;
+  ogType?: 'website' | 'article';
+  noindex?: boolean;
+}
+
+const { titel, beschrijving, ogTitel = titel, ogType = 'website', noindex = false } = Astro.props;
+const canonical = new URL(Astro.url.pathname, Astro.site);
+const ogImage = new URL('/og.jpg', Astro.site);
+const paginaTitel = titel === 'Vragen' ? 'Vragen | MHC HBS' : `${titel} | Vragen MHC HBS`;
+---
+
+<!doctype html>
+<html lang="nl">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>{paginaTitel}</title>
+    <meta name="description" content={beschrijving} />
+    <link rel="canonical" href={canonical} />
+    <link rel="icon" type="image/png" href="/favicon.png" />
+    <meta name="theme-color" content="#1b1b1d" />
+    {noindex && <meta name="robots" content="noindex" />}
+
+    <meta property="og:type" content={ogType} />
+    <meta property="og:site_name" content="Vragen MHC HBS" />
+    <meta property="og:locale" content="nl_NL" />
+    <meta property="og:title" content={ogTitel} />
+    <meta property="og:description" content={beschrijving} />
+    <meta property="og:url" content={canonical} />
+    <meta property="og:image" content={ogImage} />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content="Logo van MHC HBS" />
+    <meta name="twitter:card" content="summary" />
+  </head>
+  <body>
+    <a class="skip" href="#inhoud">Naar de inhoud</a>
+    <header class="topbalk">
+      <a class="merk" href="/">
+        <img src="/logo.png" alt="" width="28" height="33" />
+        <span>MHC HBS <span class="merk-sub">Vragen</span></span>
+      </a>
+      <a class="zoeklink" href="/zoeken">
+        <svg aria-hidden="true" viewBox="0 0 24 24" width="18" height="18"
+          ><circle cx="10.5" cy="10.5" r="6.5" fill="none" stroke="currentColor" stroke-width="2.4"></circle><path
+            d="M15.5 15.5 21 21"
+            stroke="currentColor"
+            stroke-width="2.4"
+            stroke-linecap="round"></path></svg
+        >
+        Zoeken
+      </a>
+    </header>
+    <main id="inhoud">
+      <slot />
+    </main>
+    <footer class="voet">
+      <p>
+        Staat je vraag er niet bij? Vraag het aan je lijnmanager of kijk op <a href="https://www.mhchbs.nl/">mhchbs.nl</a>.
+      </p>
+    </footer>
+  </body>
+</html>

@@ -1,0 +1,44 @@
+---
+import Basis from '../layouts/Basis.astro';
+import { categorieen } from '../lib/club';
+import { zichtbareVragen } from '../lib/faq';
+
+const vragen = await zichtbareVragen();
+const aantal = (slug: string) => vragen.filter((v) => v.data.categorie === slug).length;
+---
+
+<Basis
+  titel="Vragen"
+  beschrijving="Antwoorden op de vragen die steeds terugkomen in de appgroepen van MHC HBS."
+>
+  <h1>Vragen over MHC HBS</h1>
+  <p class="intro">
+    Hier staan de antwoorden op vragen die steeds terugkomen in de appgroepen van de club. Zoek je vraag op of kies een
+    onderwerp.
+  </p>
+
+  <form class="zoekvak" action="/zoeken" method="get" role="search">
+    <label for="q" class="verborgen">Zoek een vraag</label>
+    <input id="q" name="q" type="search" placeholder="Bijvoorbeeld: borg, keeperstraining, DWF" autocomplete="off" />
+    <button class="knop" type="submit">Zoek</button>
+  </form>
+
+  <h2>Onderwerpen</h2>
+  <ul class="lijst">
+    {
+      categorieen.map((c) => (
+        <li>
+          <a href={`/${c.slug}`}>
+            <span class="lijst-titel">
+              {c.naam}
+              <span class="teller" aria-label={`${aantal(c.slug)} vragen`}>
+                {aantal(c.slug)}
+              </span>
+            </span>
+            <span class="lijst-omschrijving">{c.omschrijving}</span>
+          </a>
+        </li>
+      ))
+    }
+  </ul>
+</Basis>

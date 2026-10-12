@@ -1,0 +1,38 @@
+# Categorieen van de vragen. Volgorde bepaalt de volgorde op de voorpagina.
+# De slug is het adres van de categoriepagina (/<slug>), dus verander die niet meer na publicatie.
+# Nieuwe categorie: voeg hier een blok toe, de lijst in /admin past zich vanzelf aan.
+
+- slug: wedstrijden
+  naam: Wedstrijden
+  omschrijving: Schema, DWF, invallers, scheidsrechters en spelregels.
+  volgorde: 1
+
+- slug: trainingen
+  naam: Trainingen
+  omschrijving: Trainingstijden, keeperstraining, looptraining en afgelasting.
+  volgorde: 2
+
+- slug: lidmaatschap-en-contributie
+  naam: Lidmaatschap en contributie
+  omschrijving: Lid worden, contributie betalen en opzeggen.
+  volgorde: 3
+
+- slug: materiaal-en-kleding
+  naam: Materiaal en kleding
+  omschrijving: Ballentas, keeperstas, borg, maskers en het clubtenue.
+  volgorde: 4
+
+- slug: vrijwilligers
+  naam: Vrijwilligers
+  omschrijving: Meehelpen bij trainingen en wedstrijden.
+  volgorde: 5
+
+- slug: clubhuis
+  naam: Clubhuis
+  omschrijving: Adres, parkeren, fietsen, gevonden voorwerpen en eten op de club.
+  volgorde: 6
+
+- slug: communicatie
+  naam: Communicatie
+  omschrijving: De LISA-app, mails, appgroepen en bij wie je terecht kunt.
+  volgorde: 7

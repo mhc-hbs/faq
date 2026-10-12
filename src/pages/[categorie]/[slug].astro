@@ -1,0 +1,130 @@
+---
+import { render } from 'astro:content';
+import Basis from '../../layouts/Basis.astro';
+import { categorie as vindCategorie, eigenaar as vindEigenaar } from '../../lib/club';
+import { zichtbareVragen, vraagUrl, platteTekst, inkorten, datumNL, isVerouderd, type Vraag } from '../../lib/faq';
+
+export async function getStaticPaths() {
+  const vragen = await zichtbareVragen();
+  return vragen.map((vraag) => ({
+    params: { categorie: vraag.data.categorie, slug: vraag.id },
+    props: {
+      vraag,
+      // Related entries that are not on the site (concept without PREVIEW) are left out.
+      gerelateerd: vraag.data.gerelateerd
+        .map((slug) => vragen.find((v) => v.id === slug))
+        .filter((v): v is Vraag => v !== undefined && v.id !== vraag.id),
+    },
+  }));
+}
+
+interface Props {
+  vraag: Vraag;
+  gerelateerd: Vraag[];
+}
+
+const { vraag, gerelateerd } = Astro.props;
+const { Content } = await render(vraag);
+const categorie = vindCategorie(vraag.data.categorie);
+const eigenaar = vindEigenaar(vraag.data.eigenaar);
+const gecheckt = vraag.data.laatst_gecheckt;
+const beschrijving = inkorten(platteTekst(vraag.body ?? ''), 150);
+const paginaUrl = new URL(vraagUrl(vraag), Astro.site).toString();
+const isoDatum = gecheckt.toISOString().slice(0, 10);
+
+const mailto =
+  `mailto:${eigenaar.email}` +
+  `?subject=${encodeURIComponent(`Klopt dit niet meer? ${vraag.data.vraag}`)}` +
+  `&body=${encodeURIComponent(`Over deze vraag: ${paginaUrl}\n\nWat klopt er niet?\n`)}`;
+---
+
+<Basis titel={vraag.data.vraag} beschrijving={beschrijving} ogType="article" noindex={vraag.data.status === 'concept'}>
+  <p class="kruimel"><a href={`/${categorie.slug}`}>{categorie.naam}</a></p>
+
+  {
+    vraag.data.status === 'concept' && (
+      <p class="banner-concept" role="note">
+        Concept: deze vraag staat nog niet op de echte site.
+      </p>
+    )
+  }
+
+  <article data-pagefind-body>
+    <h1 data-pagefind-weight="10">{vraag.data.vraag}</h1>
+
+    <p class="oud" data-gecheckt={isoDatum} data-pagefind-ignore hidden={!isVerouderd(gecheckt)}>
+      Dit antwoord is een tijd niet gecontroleerd.
+    </p>
+
+    <div class="antwoord">
+      <Content />
+    </div>
+
+    {
+      vraag.data.trefwoorden.length > 0 && (
+        <p class="verborgen" aria-hidden="true" data-pagefind-weight="5">
+          {vraag.data.trefwoorden.join(', ')}
+        </p>
+      )
+    }
+  </article>
+
+  <div class="acties">
+    <button class="knop knop-licht" type="button" data-kopieer={paginaUrl}>Kopieer link</button>
+    <a class="melden" href={mailto}>Klopt dit niet meer? Laat het weten</a>
+  </div>
+
+  <aside class="meta">
+    <dl>
+      <dt>Beheerd door</dt>
+      <dd>{eigenaar.naam}</dd>
+      <dt>Gecontroleerd</dt>
+      <dd>Laatst gecheckt op <time datetime={isoDatum}>{datumNL(gecheckt)}</time></dd>
+    </dl>
+  </aside>
+
+  {
+    gerelateerd.length > 0 && (
+      <section>
+        <h2>Zie ook</h2>
+        <ul class="lijst">
+          {gerelateerd.map((v) => (
+            <li>
+              <a href={vraagUrl(v)}>
+                <span class="lijst-titel">
+                  <span>{v.data.vraag}</span>
+                </span>
+              </a>
+            </li>
+          ))}
+        </ul>
+      </section>
+    )
+  }
+</Basis>
+
+<script>
+  // The stale note is decided at build time; check again in the browser so a page
+  // that has not been rebuilt for a while still shows it.
+  const oud = document.querySelector<HTMLElement>('.oud[data-gecheckt]');
+  if (oud?.dataset.gecheckt) {
+    const grens = new Date();
+    grens.setFullYear(grens.getFullYear() - 1);
+    if (new Date(oud.dataset.gecheckt) < grens) oud.hidden = false;
+  }
+
+  for (const knop of document.querySelectorAll<HTMLButtonElement>('[data-kopieer]')) {
+    const tekst = knop.textContent;
+    knop.addEventListener('click', async () => {
+      const url = knop.dataset.kopieer ?? location.href;
+      try {
+        await navigator.clipboard.writeText(url);
+        knop.textContent = 'Link gekopieerd';
+      } catch {
+        // Older browsers or no permission: show the link so it can be copied by hand.
+        window.prompt('Kopieer deze link:', url);
+      }
+      setTimeout(() => (knop.textContent = tekst), 2000);
+    });
+  }
+</script>

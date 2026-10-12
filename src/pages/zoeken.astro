@@ -1,0 +1,43 @@
+---
+import Basis from '../layouts/Basis.astro';
+---
+
+<Basis titel="Zoeken" beschrijving="Zoek in de vragen over MHC HBS.">
+  <p class="kruimel"><a href="/">Alle onderwerpen</a></p>
+  <h1>Zoeken</h1>
+  <link href="/pagefind/pagefind-ui.css" rel="stylesheet" />
+  <div id="zoek"></div>
+  <noscript><p>Zoeken werkt alleen met JavaScript aan. Je kunt ook via de <a href="/">onderwerpen</a> zoeken.</p></noscript>
+  <p id="zoek-fout" class="leeg" hidden>
+    Zoeken werkt pas na <code>npm run build</code>. Bekijk de site dan met <code>npm run preview</code>.
+  </p>
+</Basis>
+
+<script is:inline src="/pagefind/pagefind-ui.js"></script>
+<script is:inline>
+  if (typeof PagefindUI === 'undefined') {
+    document.getElementById('zoek-fout').hidden = false;
+  } else {
+    // Language comes from <html lang="nl">, so the UI text is Dutch.
+    const ui = new PagefindUI({
+      element: '#zoek',
+      showSubResults: false,
+      showImages: false,
+      autofocus: true,
+    });
+    const q = new URLSearchParams(location.search).get('q');
+    if (q) ui.triggerSearch(q);
+  }
+</script>
+
+<style is:global>
+  #zoek .pagefind-ui {
+    --pagefind-ui-scale: 0.9;
+    --pagefind-ui-primary: #be0027;
+    --pagefind-ui-text: #1f2328;
+    --pagefind-ui-border: #e3e4e6;
+    --pagefind-ui-border-width: 2px;
+    --pagefind-ui-border-radius: 10px;
+    --pagefind-ui-font: inherit;
+  }
+</style>

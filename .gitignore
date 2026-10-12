@@ -1,0 +1,10 @@
+node_modules/
+dist/
+.astro/
+.vercel/
+.env
+.env.*
+# Generated from decap/config.yml at every build, see scripts/decap-config.mjs
+public/admin/config.yml
+.DS_Store
+*.log
