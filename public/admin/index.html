@@ -37,6 +37,40 @@
         },
       });
 
+      // Preview pane: show a question roughly as it appears on the site, without the raw field values.
+      CMS.registerPreviewStyle('/admin/voorbeeld.css');
+
+      var MAANDEN = ['januari', 'februari', 'maart', 'april', 'mei', 'juni', 'juli', 'augustus', 'september', 'oktober', 'november', 'december'];
+
+      function datumNL(waarde) {
+        var m = /^(\d{4})-(\d{2})-(\d{2})/.exec(String(waarde || ''));
+        return m ? Number(m[3]) + ' ' + MAANDEN[Number(m[2]) - 1] + ' ' + m[1] : '';
+      }
+
+      // Label of a select option, so the preview shows "Materiaal en kleding" instead of the slug.
+      function labelVan(collection, veld, waarde) {
+        var field = collection.get('fields').find(function (f) { return f.get('name') === veld; });
+        var optie = field && field.get('options').find(function (o) { return o.get('value') === waarde; });
+        return optie ? optie.get('label') : waarde || '';
+      }
+
+      CMS.registerPreviewTemplate('faq', function (props) {
+        var data = props.entry.get('data');
+        var datum = datumNL(data.get('laatst_gecheckt'));
+        return h('div', {},
+          h('p', { className: 'kruimel' }, labelVan(props.collection, 'categorie', data.get('categorie'))),
+          data.get('status') !== 'gepubliceerd'
+            ? h('p', { className: 'banner' }, 'Concept: deze vraag staat nog niet op de site.')
+            : null,
+          h('h1', {}, data.get('vraag') || 'Nog geen vraag'),
+          props.widgetFor('body'),
+          h('div', { className: 'meta' },
+            h('p', {}, 'Antwoord van: ' + labelVan(props.collection, 'eigenaar', data.get('eigenaar'))),
+            datum ? h('p', {}, 'Laatst gecheckt op ' + datum) : null
+          )
+        );
+      });
+
       // Log in through api/auth on whichever domain this page is served from.
       CMS.init({ config: { backend: { base_url: window.location.origin } } });
     </script>
