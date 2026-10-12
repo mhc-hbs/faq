@@ -28,6 +28,9 @@ publish_mode: simple
 local_backend: true
 
 locale: nl
+
+# Clublogo op het inlogscherm in plaats van het standaardlogo van Decap.
+logo_url: /logo.png
 media_folder: public/uploads
 public_folder: /uploads
 
