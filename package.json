@@ -13,8 +13,11 @@
     "node": ">=22"
   },
   "dependencies": {
+    "@fontsource/inter": "5.2.8",
+    "@resvg/resvg-js": "2.6.2",
     "astro": "^7.3.8",
     "pagefind": "^1.5.2",
+    "satori": "0.33.5",
     "yaml": "^2.9.1"
   },
   "devDependencies": {

@@ -38,7 +38,7 @@ const mailto =
   `&body=${encodeURIComponent(`Over deze vraag: ${paginaUrl}\n\nWat klopt er niet?\n`)}`;
 ---
 
-<Basis titel={vraag.data.vraag} beschrijving={beschrijving} ogType="article" noindex={vraag.data.status === 'concept'}>
+<Basis titel={vraag.data.vraag} beschrijving={beschrijving} ogType="article" ogAfbeelding={`/og${vraagUrl(vraag)}.png`} noindex={vraag.data.status === 'concept'}>
   <p class="kruimel"><a href={`/${categorie.slug}`}>{categorie.naam}</a></p>
 
   {

@@ -7,12 +7,14 @@ interface Props {
   /** Text for og:title. Defaults to `titel`. */
   ogTitel?: string;
   ogType?: 'website' | 'article';
+  /** Path of the share image. Defaults to the general image. */
+  ogAfbeelding?: string;
   noindex?: boolean;
 }
 
-const { titel, beschrijving, ogTitel = titel, ogType = 'website', noindex = false } = Astro.props;
+const { titel, beschrijving, ogTitel = titel, ogType = 'website', ogAfbeelding = '/og/standaard.png', noindex = false } = Astro.props;
 const canonical = new URL(Astro.url.pathname, Astro.site);
-const ogImage = new URL('/og.jpg', Astro.site);
+const ogImage = new URL(ogAfbeelding, Astro.site);
 const paginaTitel = titel === 'Vragen' ? 'Vragen | MHC HBS' : `${titel} | Vragen MHC HBS`;
 ---
 
@@ -37,8 +39,8 @@ const paginaTitel = titel === 'Vragen' ? 'Vragen | MHC HBS' : `${titel} | Vragen
     <meta property="og:image" content={ogImage} />
     <meta property="og:image:width" content="1200" />
     <meta property="og:image:height" content="630" />
-    <meta property="og:image:alt" content="Logo van MHC HBS" />
-    <meta name="twitter:card" content="summary" />
+    <meta property="og:image:alt" content={ogTitel} />
+    <meta name="twitter:card" content="summary_large_image" />
   </head>
   <body>
     <a class="skip" href="#inhoud">Naar de inhoud</a>
