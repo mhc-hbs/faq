@@ -3,7 +3,7 @@ vraag: "Wat is de kick-off aan het begin van het seizoen?"
 categorie: wedstrijden
 eigenaar: jeugdcommissie
 laatst_gecheckt: 2026-08-20
-status: concept
+status: gepubliceerd
 trefwoorden: [kick-off, kickoff, start seizoen, teamfoto, kennismaken, onderlinge wedstrijden]
 gerelateerd: [welk-tenue-draag-je-bij-hbs, informatieavond-nieuwe-leden]
 ---

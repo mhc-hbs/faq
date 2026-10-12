@@ -3,7 +3,7 @@ vraag: "Hoe werkt de keeperstraining?"
 categorie: trainingen
 eigenaar: tc
 laatst_gecheckt: 2026-09-08
-status: concept
+status: gepubliceerd
 trefwoorden: [keeper, keepen, keeperstraining, keeperspak, rouleren, wisselkeeper, shoot-out]
 gerelateerd: [ballentas-keeperstas-en-borg, waar-vind-ik-de-trainingstijden]
 ---

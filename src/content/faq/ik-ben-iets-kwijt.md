@@ -3,7 +3,7 @@ vraag: "Ik ben iets kwijtgeraakt op de club. Waar moet ik kijken?"
 categorie: clubhuis
 eigenaar: barcommissie
 laatst_gecheckt: 2026-10-12
-status: concept
+status: gepubliceerd
 trefwoorden: [gevonden voorwerpen, kwijt, verloren, lost and found, jas, bidon, stick, bitje, scheenbeschermers]
 gerelateerd: []
 ---

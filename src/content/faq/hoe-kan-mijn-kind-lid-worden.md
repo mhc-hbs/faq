@@ -3,7 +3,7 @@ vraag: "Hoe kan mijn kind lid worden?"
 categorie: lidmaatschap-en-contributie
 eigenaar: secretariaat
 laatst_gecheckt: 2026-10-12
-status: concept
+status: gepubliceerd
 trefwoorden: [lid worden, inschrijven, aanmelden, wachtlijst, nieuw lid, proeftraining, peildatum]
 gerelateerd: [informatieavond-nieuwe-leden, hoeveel-contributie-betaal-ik]
 ---

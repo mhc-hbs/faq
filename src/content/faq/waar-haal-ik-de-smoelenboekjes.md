@@ -3,7 +3,7 @@ vraag: "Waar haal ik de smoelenboekjes voor mijn team?"
 categorie: clubhuis
 eigenaar: secretariaat
 laatst_gecheckt: 2026-09-11
-status: concept
+status: gepubliceerd
 trefwoorden: [smoelenboek, smoelenboekje, boekje, kantoortje]
 gerelateerd: []
 ---

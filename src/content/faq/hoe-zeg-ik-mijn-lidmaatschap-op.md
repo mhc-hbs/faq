@@ -3,7 +3,7 @@ vraag: "Hoe zeg ik mijn lidmaatschap op?"
 categorie: lidmaatschap-en-contributie
 eigenaar: secretariaat
 laatst_gecheckt: 2026-10-12
-status: concept
+status: gepubliceerd
 trefwoorden: [opzeggen, stoppen, uitschrijven, lidmaatschap beëindigen, opzegformulier, mijn habie]
 gerelateerd: [hoeveel-contributie-betaal-ik]
 ---

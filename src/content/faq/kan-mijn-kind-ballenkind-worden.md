@@ -3,7 +3,7 @@ vraag: "Kan mijn kind ballenkind of mini van de week worden bij Dames 1 of Heren
 categorie: wedstrijden
 eigenaar: jeugdcommissie
 laatst_gecheckt: 2026-08-25
-status: concept
+status: gepubliceerd
 trefwoorden: [ballenkind, ballenjongen, ballenmeisje, mini van de week, dames 1, heren 1, D1, H1]
 gerelateerd: []
 ---

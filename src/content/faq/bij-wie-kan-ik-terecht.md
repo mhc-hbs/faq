@@ -3,7 +3,7 @@ vraag: "Bij wie kan ik terecht met een vraag?"
 categorie: communicatie
 eigenaar: secretariaat
 laatst_gecheckt: 2026-10-12
-status: concept
+status: gepubliceerd
 trefwoorden: [contact, mailadres, e-mail, vraag, klacht, vertrouwenspersoon, wie]
 gerelateerd: [hoe-werken-de-appgroepen]
 ---

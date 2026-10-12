@@ -3,7 +3,7 @@ vraag: "Waar kan ik mijn fiets neerzetten?"
 categorie: clubhuis
 eigenaar: jeugdcommissie
 laatst_gecheckt: 2026-08-26
-status: concept
+status: gepubliceerd
 trefwoorden: [fiets, fietsen, fietsenstalling, stallen, parkeren, nooddiensten, BVC]
 gerelateerd: [wat-is-het-adres-en-waar-parkeer-ik]
 ---

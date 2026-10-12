@@ -3,7 +3,7 @@ vraag: "Ik krijg de mails voor coaches en managers niet. Hoe kan dat?"
 categorie: communicatie
 eigenaar: secretariaat
 laatst_gecheckt: 2026-08-21
-status: concept
+status: gepubliceerd
 trefwoorden: [mail, geen mail, niet ontvangen, gemist, koppeling, teammanager, coach]
 gerelateerd: [hoe-kom-ik-in-de-lisa-app, hoe-werken-de-appgroepen]
 ---

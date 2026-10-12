@@ -3,7 +3,7 @@ vraag: "Wat doet een speelbegeleider bij de jongste jeugd?"
 categorie: vrijwilligers
 eigenaar: jeugdcommissie
 laatst_gecheckt: 2026-08-19
-status: concept
+status: gepubliceerd
 trefwoorden: [speelbegeleider, spelbegeleider, begeleiden, fluiten, O8, O9, O10, ouder]
 gerelateerd: [wie-fluit-de-wedstrijd, spelregels-jongste-jeugd]
 ---

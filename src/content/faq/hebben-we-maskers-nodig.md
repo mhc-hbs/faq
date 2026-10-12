@@ -3,7 +3,7 @@ vraag: "Hebben we maskers nodig voor de strafcorner?"
 categorie: materiaal-en-kleding
 eigenaar: materialencommissie
 laatst_gecheckt: 2026-08-24
-status: concept
+status: gepubliceerd
 trefwoorden: [masker, maskers, strafcorner, corner, huren, O11, lijnstop]
 gerelateerd: [ballentas-keeperstas-en-borg, spelregels-jongste-jeugd]
 ---

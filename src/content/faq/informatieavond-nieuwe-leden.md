@@ -3,7 +3,7 @@ vraag: "Is er uitleg voor ouders van nieuwe jeugdleden en voor nieuwe begeleider
 categorie: lidmaatschap-en-contributie
 eigenaar: jeugdcommissie
 laatst_gecheckt: 2026-08-13
-status: concept
+status: gepubliceerd
 trefwoorden: [informatieavond, nieuw, nieuwe leden, begeleidersavond, managersavond, uitleg, start]
 gerelateerd: [hoe-kan-mijn-kind-lid-worden, wat-is-de-kick-off]
 ---

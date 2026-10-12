@@ -1,32 +1,31 @@
 # Commissies die een antwoord beheren. Het e-mailadres wordt gebruikt voor de
 # link "Klopt dit niet meer? Laat het weten" onder elke vraag.
-# Vervang de voorbeeldadressen (@voorbeeld.invalid) door echte adressen.
-# Achter "suggestie" staat een adres dat al op mhchbs.nl staat.
+# Commissies zonder eigen adres gebruiken voorlopig info@mhchbs.nl.
 
 - slug: jeugdcommissie
   naam: Jeugdcommissie
-  email: jeugdcommissie@voorbeeld.invalid   # suggestie: jeugd@mhchbs.nl
+  email: jeugd@mhchbs.nl
 
 - slug: tc
   naam: Technische commissie
-  email: tc@voorbeeld.invalid
+  email: info@mhchbs.nl
 
 - slug: secretariaat
   naam: Secretariaat
-  email: secretariaat@voorbeeld.invalid     # suggestie: info@mhchbs.nl
+  email: info@mhchbs.nl
 
 - slug: barcommissie
   naam: Barcommissie
-  email: barcommissie@voorbeeld.invalid
+  email: info@mhchbs.nl
 
 - slug: wedstrijdsecretariaat
   naam: Wedstrijdsecretariaat
-  email: wedstrijdsecretariaat@voorbeeld.invalid
+  email: info@mhchbs.nl
 
 - slug: materialencommissie
   naam: Materialencommissie
-  email: materialencommissie@voorbeeld.invalid   # suggestie: materialencommissie@mhchbs.nl
+  email: materialencommissie@mhchbs.nl
 
 - slug: arbitragecommissie
   naam: Arbitragecommissie
-  email: arbitragecommissie@voorbeeld.invalid    # suggestie: voorzitterarbitrage@mhchbs.nl
+  email: voorzitterarbitrage@mhchbs.nl

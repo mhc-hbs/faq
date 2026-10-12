@@ -3,7 +3,7 @@ vraag: "Waar vind ik de trainingstijden van mijn team?"
 categorie: trainingen
 eigenaar: tc
 laatst_gecheckt: 2026-08-27
-status: concept
+status: gepubliceerd
 trefwoorden: [trainingstijden, trainingsschema, hoe laat trainen, veld, vrijdagtraining, even week, oneven week]
 gerelateerd: [hoe-werkt-de-keeperstraining, wat-is-de-looptraining, gaat-de-training-door-bij-slecht-weer]
 ---

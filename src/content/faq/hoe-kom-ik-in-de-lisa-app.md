@@ -3,7 +3,7 @@ vraag: "Hoe kom ik als ouder of begeleider in de LISA-app?"
 categorie: communicatie
 eigenaar: secretariaat
 laatst_gecheckt: 2026-08-27
-status: concept
+status: gepubliceerd
 trefwoorden: [LISA, app, inloggen, lidnummer, vrijwilliger, account, koppelen, rechten]
 gerelateerd: [hoe-werkt-het-dwf, ik-krijg-de-mails-voor-begeleiders-niet]
 ---

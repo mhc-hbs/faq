@@ -3,7 +3,7 @@ vraag: "Wat is het adres van de club en waar kan ik parkeren?"
 categorie: clubhuis
 eigenaar: secretariaat
 laatst_gecheckt: 2026-10-12
-status: concept
+status: gepubliceerd
 trefwoorden: [adres, route, parkeren, auto, bergweg, bloemendaal, openbaar vervoer, trein]
 gerelateerd: [waar-zet-ik-mijn-fiets]
 ---

@@ -3,7 +3,7 @@ vraag: "Waar vind ik het wedstrijdschema en de aanvangstijden?"
 categorie: wedstrijden
 eigenaar: wedstrijdsecretariaat
 laatst_gecheckt: 2026-08-28
-status: concept
+status: gepubliceerd
 trefwoorden: [schema, programma, wanneer spelen we, hoe laat, aanvangstijd, LISA, tegenstander]
 gerelateerd: [hoe-werkt-het-dwf, waar-vind-ik-de-trainingstijden, hoe-kom-ik-in-de-lisa-app]
 ---

@@ -3,13 +3,13 @@ vraag: "Welk tenue draag je bij HBS, thuis en uit?"
 categorie: materiaal-en-kleding
 eigenaar: secretariaat
 laatst_gecheckt: 2026-10-12
-status: concept
+status: gepubliceerd
 trefwoorden: [tenue, shirt, sokken, kousen, uittenue, thuistenue, kleding, kopen, kledingbeurs, Huijg]
 gerelateerd: [wat-is-de-kick-off]
 ---
 **Thuis:** zwart shirt met rode kraag en rode bies, rode broek of rood rokje, witte kousen met HBS-logo.
 
-**Uit:** rood shirt met zwarte kraag en zwarte bies, rode broek of rood rokje, rode kousen met HBS-logo.
+**Uit:** rood shirt met zwarte kraag en zwarte bies, rode broek of rood rokje, zwart-rood gestreepte kousen.
 
 Lijken de tenues van beide teams te veel op elkaar, dan draagt het uitspelende team een afwijkende kleur.
 

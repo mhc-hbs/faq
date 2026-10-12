@@ -3,7 +3,7 @@ vraag: "Hoe zit het met de ballentas, de keeperstas en de borg?"
 categorie: materiaal-en-kleding
 eigenaar: materialencommissie
 laatst_gecheckt: 2026-08-16
-status: concept
+status: gepubliceerd
 trefwoorden: [borg, ballentas, keeperstas, pionnen, hesjes, ballen, materiaal ophalen, inleveren, tikkie]
 gerelateerd: [hebben-we-maskers-nodig, waar-liggen-de-flapjes, hoe-werkt-de-keeperstraining]
 ---

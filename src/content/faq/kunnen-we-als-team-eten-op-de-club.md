@@ -3,7 +3,7 @@ vraag: "Kunnen we als team eten op de club?"
 categorie: clubhuis
 eigenaar: barcommissie
 laatst_gecheckt: 2026-09-04
-status: concept
+status: gepubliceerd
 trefwoorden: [eten, team eten, pizza, teamavond, scheidsrechteravond, bar, clubhuis]
 gerelateerd: []
 ---

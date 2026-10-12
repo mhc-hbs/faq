@@ -3,7 +3,7 @@ vraag: "Hoe haal ik een scheidsrechterskaart?"
 categorie: wedstrijden
 eigenaar: arbitragecommissie
 laatst_gecheckt: 2026-09-04
-status: concept
+status: gepubliceerd
 trefwoorden: [scheidsrechterskaart, kaart, cursus, examen, fluiten, arbitrage, spelregels]
 gerelateerd: [wie-fluit-de-wedstrijd, spelregels-jongste-jeugd]
 ---

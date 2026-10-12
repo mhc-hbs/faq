@@ -3,7 +3,7 @@ vraag: "Kan ik als ouder helpen bij de trainingen?"
 categorie: vrijwilligers
 eigenaar: jeugdcommissie
 laatst_gecheckt: 2026-09-09
-status: concept
+status: gepubliceerd
 trefwoorden: [hulpouder, helpen, training, trainer tekort, vrijwilliger, meetrainen]
 gerelateerd: [wat-doet-een-speelbegeleider]
 ---

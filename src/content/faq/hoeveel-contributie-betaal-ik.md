@@ -3,7 +3,7 @@ vraag: "Hoeveel contributie betaal ik en wanneer wordt die geïnd?"
 categorie: lidmaatschap-en-contributie
 eigenaar: secretariaat
 laatst_gecheckt: 2026-10-12
-status: concept
+status: gepubliceerd
 trefwoorden: [contributie, kosten, betalen, factuur, incasso, termijnen, ideal, lidmaatschap]
 gerelateerd: [hoe-werkt-zaalhockey, hoe-zeg-ik-mijn-lidmaatschap-op]
 ---

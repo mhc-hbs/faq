@@ -3,7 +3,7 @@ vraag: "Wat is de looptraining?"
 categorie: trainingen
 eigenaar: tc
 laatst_gecheckt: 2026-08-31
-status: concept
+status: gepubliceerd
 trefwoorden: [looptraining, lopen, hardlopen, duinen, zandkuil, conditie, motoriek]
 gerelateerd: [waar-vind-ik-de-trainingstijden, hoe-werkt-de-keeperstraining]
 ---

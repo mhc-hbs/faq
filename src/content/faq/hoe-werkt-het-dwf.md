@@ -3,7 +3,7 @@ vraag: "Hoe werkt het digitaal wedstrijdformulier (DWF)?"
 categorie: wedstrijden
 eigenaar: wedstrijdsecretariaat
 laatst_gecheckt: 2026-09-03
-status: concept
+status: gepubliceerd
 trefwoorden: [DWF, wedstrijdformulier, uitslag, eindstand, code, spelers aanmelden, boete]
 gerelateerd: [hoe-kom-ik-in-de-lisa-app, hoe-regel-ik-invallers]
 ---

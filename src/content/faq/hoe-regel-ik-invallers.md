@@ -3,7 +3,7 @@ vraag: "We hebben te weinig spelers. Hoe regel ik invallers?"
 categorie: wedstrijden
 eigenaar: jeugdcommissie
 laatst_gecheckt: 2026-09-04
-status: concept
+status: gepubliceerd
 trefwoorden: [invallen, invaller, te weinig spelers, tekort, lenen, meespelen]
 gerelateerd: [hoe-werkt-het-dwf, hoe-werken-de-appgroepen]
 ---

@@ -3,7 +3,7 @@ vraag: "Wie moet er fluiten of begeleiden bij onze wedstrijd?"
 categorie: wedstrijden
 eigenaar: arbitragecommissie
 laatst_gecheckt: 2026-09-06
-status: concept
+status: gepubliceerd
 trefwoorden: [fluiten, scheidsrechter, scheids, speelbegeleider, thuiswedstrijd, uitwedstrijd, jeugdscheidsrechter]
 gerelateerd: [hoe-haal-ik-een-scheidsrechterskaart, wat-doet-een-speelbegeleider, spelregels-jongste-jeugd]
 ---

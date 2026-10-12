@@ -3,7 +3,7 @@ vraag: "Hoe werkt zaalhockey in de winter?"
 categorie: wedstrijden
 eigenaar: wedstrijdsecretariaat
 laatst_gecheckt: 2026-10-12
-status: concept
+status: gepubliceerd
 trefwoorden: [zaal, zaalhockey, winterstop, winter, opgeven, zaalcontributie]
 gerelateerd: [hoeveel-contributie-betaal-ik]
 ---

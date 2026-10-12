@@ -3,7 +3,7 @@ vraag: "Waar vind ik flapjes om een veld uit te zetten?"
 categorie: materiaal-en-kleding
 eigenaar: materialencommissie
 laatst_gecheckt: 2026-08-24
-status: concept
+status: gepubliceerd
 trefwoorden: [flapjes, veld uitzetten, cirkel, lijnen, pionnen, kast, bar]
 gerelateerd: [ballentas-keeperstas-en-borg]
 ---

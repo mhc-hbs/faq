@@ -3,7 +3,7 @@ vraag: "Gaat de training door bij regen of onweer?"
 categorie: trainingen
 eigenaar: tc
 laatst_gecheckt: 2026-08-28
-status: concept
+status: gepubliceerd
 trefwoorden: [afgelasting, afgelast, regen, onweer, slecht weer, gaat het door, training]
 gerelateerd: [waar-vind-ik-de-trainingstijden]
 ---
