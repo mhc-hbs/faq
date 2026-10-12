@@ -46,6 +46,7 @@ collections:
     description: >-
       Elke vraag is een eigen pagina. Het adres (slug) wordt gemaakt als je een nieuwe
       vraag opslaat en verandert daarna niet meer, ook niet als je de vraag aanpast.
+      Uitleg voor beheerders staat op /uitleg.
     folder: src/content/faq
     create: true
     delete: true

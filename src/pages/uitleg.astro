@@ -1,0 +1,158 @@
+---
+import Basis from '../layouts/Basis.astro';
+import { categorieen } from '../lib/club';
+---
+
+<Basis
+  titel="Uitleg voor beheerders"
+  beschrijving="Zo voeg je vragen toe, pas je ze aan en zet je ze op de site."
+>
+  <p class="kruimel"><a href="/">Alle onderwerpen</a></p>
+  <h1>Uitleg voor beheerders</h1>
+
+  <p class="intro">
+    Deze pagina is voor commissieleden en begeleiders die vragen op deze site bijhouden. Ben je op zoek naar een
+    antwoord? Ga dan naar de <a href="/">onderwerpen</a> of <a href="/zoeken">zoek</a>.
+  </p>
+
+  <nav class="inhoud" aria-label="Op deze pagina">
+    <ol>
+      <li><a href="#waarom">Waarom deze site</a></li>
+      <li><a href="#toegang">Toegang krijgen</a></li>
+      <li><a href="#toevoegen">Een vraag toevoegen</a></li>
+      <li><a href="#wijzigen">Een vraag aanpassen</a></li>
+      <li><a href="#publiceren">Op de site zetten of eraf halen</a></li>
+      <li><a href="#schrijven">Zo schrijf je een goed antwoord</a></li>
+      <li><a href="#whatsapp">Gebruik in WhatsApp</a></li>
+      <li><a href="#problemen">Als iets niet lukt</a></li>
+    </ol>
+  </nav>
+
+  <h2 id="waarom">Waarom deze site</h2>
+  <ul>
+    <li><strong>Eén plek met het juiste antwoord.</strong> Wat hier staat, geldt. Klopt iets niet meer, dan pas je het hier aan, en dan is het overal meteen goed.</li>
+    <li><strong>Minder herhaling in WhatsApp.</strong> Dezelfde vragen komen elk seizoen terug in de appgroepen. Stuur een link naar het antwoord in plaats van het opnieuw uit te typen.</li>
+    <li><strong>Voor iedereen.</strong> Leden, ouders en begeleiders kunnen alles lezen, zonder in te loggen en zonder in de juiste appgroep te zitten.</li>
+  </ul>
+
+  <h2 id="toegang">Toegang krijgen</h2>
+  <p>Je hebt alleen een gratis GitHub-account nodig. Daar staan de vragen opgeslagen.</p>
+  <ol class="stappen">
+    <li>Maak een account op <a href="https://github.com/signup">github.com/signup</a>. Een gewone gebruikersnaam en je eigen mailadres zijn genoeg.</li>
+    <li>Stuur je GitHub-gebruikersnaam naar de werkgroep communicatie.</li>
+    <li>Je krijgt een uitnodiging per mail. Klik op <strong>Accept invitation</strong>.</li>
+    <li>Ga naar <a href="/admin/">deze site /admin</a> en klik op <strong>Inloggen met GitHub</strong>.</li>
+    <li>De eerste keer vraagt GitHub om toestemming. Klik op <strong>Authorize</strong>. Staat er een knop <strong>Grant</strong> bij mhc-hbs, klik die dan eerst aan.</li>
+  </ol>
+  <p class="tip">
+    <strong>Voor de werkgroep communicatie:</strong> iemand toevoegen doe je op GitHub bij de repository <a href="https://github.com/mhc-hbs/faq/settings/access">mhc-hbs/faq, Settings, Collaborators</a>. Kies <strong>Add people</strong> en geef de rol <strong>Write</strong>.
+  </p>
+
+  <h2 id="toevoegen">Een vraag toevoegen</h2>
+  <ol class="stappen">
+    <li>Ga naar <a href="/admin/">/admin</a> en klik op <strong>Nieuwe Vraag</strong>.</li>
+    <li><strong>Vraag:</strong> schrijf hem zoals een ouder hem in de appgroep zou stellen.</li>
+    <li><strong>Adres (slug):</strong> laat leeg. Het adres wordt gemaakt van de vraag.</li>
+    <li><strong>Categorie</strong> en <strong>Eigenaar:</strong> kies uit de lijst. De eigenaar is de commissie die weet of het antwoord klopt.</li>
+    <li><strong>Laatst gecheckt:</strong> staat al op vandaag.</li>
+    <li><strong>Op de site:</strong> laat op <em>Nee, nog niet</em> zolang de eigenaar het antwoord niet heeft gezien.</li>
+    <li><strong>Trefwoorden:</strong> woorden waarop mensen zoeken, zoals <em>borg, tikkie, keeper</em>.</li>
+    <li><strong>Antwoord:</strong> de tekst. Kopjes, lijstjes, vet en links kunnen allemaal.</li>
+    <li>Klik bovenaan op <strong>Opslaan</strong>.</li>
+  </ol>
+  <p>Rechts zie je terwijl je typt hoe de vraag eruit komt te zien.</p>
+
+  <h2 id="wijzigen">Een vraag aanpassen</h2>
+  <ol class="stappen">
+    <li>Ga naar <a href="/admin/">/admin</a> en klik op de vraag. Je kunt bovenaan zoeken of filteren.</li>
+    <li>Pas de tekst aan.</li>
+    <li>Heb je gecontroleerd dat alles klopt? Zet <strong>Laatst gecheckt</strong> op vandaag (knop <strong>Nu</strong>).</li>
+    <li>Klik op <strong>Opslaan</strong>.</li>
+  </ol>
+  <p>
+    Het adres van een vraag verandert nooit, ook niet als je de vraag anders formuleert. Links die al in WhatsApp
+    zijn gedeeld, blijven dus werken.
+  </p>
+  <p>
+    Is een antwoord meer dan een jaar niet gecontroleerd, dan staat er op de site <em>"Dit antwoord is een tijd niet gecontroleerd."</em> Kijk het dan na en zet de datum op vandaag.
+  </p>
+
+  <h2 id="publiceren">Op de site zetten of eraf halen</h2>
+  <ul>
+    <li><strong>Op de site zetten:</strong> zet <strong>Op de site</strong> op <em>Ja, zichtbaar op de site</em> en klik op <strong>Opslaan</strong>.</li>
+    <li><strong>Eraf halen:</strong> zet het terug op <em>Nee, nog niet</em> en klik op <strong>Opslaan</strong>.</li>
+    <li><strong>Wachten:</strong> na het opslaan duurt het een à twee minuten voordat de site is bijgewerkt. Herlaad dan de pagina.</li>
+  </ul>
+  <p>
+    <strong>Opslaan</strong> bewaart altijd je wijziging. Alleen het veld <strong>Op de site</strong> bepaalt of
+    iedereen de vraag kan zien.
+  </p>
+  <p>
+    Verwijder liever geen vragen. Mensen hebben de link misschien al gedeeld. Zet een vraag die niet meer klopt op <em>Nee</em>, of pas het antwoord aan.
+  </p>
+
+  <h2 id="schrijven">Zo schrijf je een goed antwoord</h2>
+  <ol class="stappen">
+    <li><strong>Eerst het antwoord, dan de uitleg.</strong> De eerste zin moet de vraag al beantwoorden.</li>
+    <li><strong>Eén vraag per pagina.</strong> Twee vragen in één? Maak er twee van en koppel ze bij <strong>Gerelateerde vragen</strong>.</li>
+    <li><strong>Link naar de bron.</strong> Kan het antwoord veranderen, zoals bedragen of tijden? Link naar de pagina op mhchbs.nl of de KNHB waar het staat.</li>
+  </ol>
+  <ul>
+    <li>Schrijf zoals je praat, met <em>je</em> en korte zinnen.</li>
+    <li>Geen namen of telefoonnummers van vrijwilligers. Noem de rol of de commissie en een clubadres. Mensen wisselen, rollen blijven.</li>
+    <li>Tijden die alleen voor dit seizoen gelden? Zet erbij welk seizoen, of verwijs naar de LISA-app.</li>
+  </ul>
+  <p>
+    De onderwerpen zijn: {categorieen.map((c) => c.naam).join(', ')}. Mist er een onderwerp of een commissie in de
+    lijst, vraag het dan aan de werkgroep communicatie.
+  </p>
+
+  <h2 id="whatsapp">Gebruik in WhatsApp</h2>
+  <ol class="stappen">
+    <li>Komt er een vraag in de appgroep? Zoek hem op deze site.</li>
+    <li>Staat hij erbij, open de vraag, klik op <strong>Kopieer link</strong> en plak de link in de groep.</li>
+    <li>Staat hij er niet bij, beantwoord hem dan één keer in de groep en zet hem daarna hier. De volgende keer is een link genoeg.</li>
+  </ol>
+  <p>
+    Zet de link naar de site ook in de beschrijving van je appgroep, dan vinden mensen hem zelf: <a href="/">{Astro.site?.host ?? 'deze site'}</a>.
+  </p>
+
+  <h2 id="problemen">Als iets niet lukt</h2>
+  <ul>
+    <li><strong>Inloggen lukt niet:</strong> heb je de uitnodiging per mail geaccepteerd? Zonder uitnodiging kun je niet opslaan.</li>
+    <li><strong>Je wijziging staat er niet:</strong> wacht twee minuten en herlaad de pagina. Staat <strong>Op de site</strong> wel op <em>Ja</em>?</li>
+    <li><strong>Je ziet iets wat niet klopt, maar het is niet jouw vraag:</strong> klik onder de vraag op <em>Klopt dit niet meer? Laat het weten</em>. Dan krijgt de eigenaar een mail.</li>
+    <li><strong>Iets anders:</strong> vraag het aan de werkgroep communicatie.</li>
+  </ul>
+</Basis>
+
+<style>
+  .inhoud {
+    margin: 1.25rem 0 0;
+    padding: 0.9rem 1rem;
+    border-radius: var(--radius);
+    background: var(--vlak);
+  }
+
+  .inhoud ol {
+    margin: 0;
+    padding-left: 1.25rem;
+  }
+
+  h2 {
+    scroll-margin-top: 5rem;
+  }
+
+  .stappen li,
+  ul li {
+    margin-bottom: 0.4rem;
+  }
+
+  .tip {
+    padding: 0.75rem 1rem;
+    border-left: 4px solid var(--rood);
+    background: var(--vlak);
+    border-radius: 0 var(--radius) var(--radius) 0;
+    font-size: 0.95rem;
+  }
+</style>

@@ -26,7 +26,7 @@ export interface Eigenaar {
 const CONTENT_DIR = join(process.cwd(), 'src', 'content');
 const SLUG_RE = /^[a-z0-9]+(-[a-z0-9]+)*$/;
 // Top-level paths that already exist; a category with one of these names would clash.
-const GERESERVEERD = new Set(['admin', 'api', 'zoeken', 'pagefind', 'uploads', '404']);
+const GERESERVEERD = new Set(['admin', 'api', 'zoeken', 'pagefind', 'uploads', 'uitleg', 'og', '404']);
 
 function leesLijst(bestand: string): Record<string, unknown>[] {
   const pad = join(CONTENT_DIR, bestand);
